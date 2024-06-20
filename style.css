@@ -17,7 +17,7 @@ canvas {
     padding: 0px;
     position: absolute;
     z-index: -1;
-    filter: blur(5vmin);
+    filter: blur(3vmin);
 }
 
 .icon {
