@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Evan Parker</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" type="module" defer></script>
+</head>
+
+<body>
+    <canvas></canvas>
+    <div class="container" id="mainMenu">
+        <div class="icon" id="contact" data-hover="Contact Me!" onclick="changeMenu('contactMenu');"></div>
+        <div class="icon" id="discord" data-hover="Join my Discord server!" onclick="window.open('//discord.gg/NmzPN9QfA9');"></div>
+        <div class="icon" id="github" data-hover="Check out my GitHub profile!" onclick="window.open('//github.com/z46-dev');"></div>
+        <div class="icon" id="resume" data-hover="Take a look at my interactive résumé!"></div>
+        <div class="icon" id="projects" data-hover="Check out some of my projects!" onclick="changeMenu('projectsMenu');"></div>
+        <div class="icon" id="credits" data-hover="SVG icons from https://svgrepo.com/" onclick="window.open('//svgrepo.com/');"></div>
+        <h1>Evan Parker</h1>
+    </div>
+
+    <div class="container" id="contactMenu">
+        <div class="icon" id="mail" data-hover="Email me!"></div>
+        <div class="icon" id="linkedin" data-hover="Connect with me on LinkedIn!"></div>
+        <div class="icon" id="back" data-hover="Back" onclick="changeMenu('mainMenu');"></div>
+        <h1>Contact Me!</h1>
+    </div>
+
+    <div class="container" id="projectsMenu">
+        <div class="icon" id="maze" data-hover="Procedural Maze Generator" onclick="window.open('//gmg.eparker.dev');"></div>
+        <div class="icon" id="raytracing" data-hover="Simple Raytracing Test" onclick="window.open('//ray.eparker.dev');"></div>
+        <div class="icon" id="weather" data-hover="NFA Weather App" onclick="window.open('//wx.nfaschool.org');"></div>
+        <div class="icon" id="flot" data-hover="Flot, a naval game (IN DEVELOPMENT)" onclick="window.open('//flot.eparker.dev');"></div>
+        <div class="icon" id="tabulaRasa" data-hover="Tabula Rasa, a tanks game, my APCSA final project (NOT ACTIVE)" onclick="window.open('//tabularasa.eparker.dev');"></div>
+        <div class="icon" id="back" data-hover="Back" onclick="changeMenu('mainMenu');"></div>
+        <h1>Some of my Projects</h1>
+    </div>
+</body>
+
+</html>
