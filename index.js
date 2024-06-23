@@ -21,7 +21,22 @@ for (let i = 0; i < allIcons.length; i++) {
     icon.addEventListener("mouseleave", () => {
         tooltip.classList.remove("active");
     });
+
+    icon.addEventListener("touchstart", () => {
+        icon.click();
+    });
 }
+
+document.body.addEventListener("touchstart", () => {
+    const event = new MouseEvent("mouseleave", {
+        bubbles: true,
+        cancelable: true
+    });
+
+    for (let i = 0; i < allIcons.length; i++) {
+        allIcons.item(i).dispatchEvent(event);
+    }
+});
 
 const distance = 27;
 let icons = [];
