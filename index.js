@@ -9,6 +9,11 @@ const allIcons = document.querySelectorAll(".icon");
 for (let i = 0; i < allIcons.length; i++) {
     const icon = allIcons.item(i);
 
+    console.log(icon.dataset);
+    if (icon.dataset.skilldescription) {
+        icon.addEventListener("click", () => changeSkill(icon.id));
+    }
+
     const img = new Image();
     img.src = "./icons/" + icon.id + ".svg";
     icon.appendChild(img);
@@ -64,3 +69,14 @@ function changeMenu(id) {
 
 window.changeMenu = changeMenu;
 changeMenu("mainMenu");
+
+function changeSkill(id) {
+    const menu = document.getElementById("skillsMenu");
+    const icon = document.querySelector(".icon#" + id);
+
+    menu.querySelector("img").src = "./icons/" + id + ".svg";
+    menu.querySelector("span").textContent = icon.dataset.hover;
+    menu.querySelector("p").textContent = icon.dataset.skilldescription;
+
+    setTimeout(() => changeMenu("skillsMenu"), 500);
+}

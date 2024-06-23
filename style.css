@@ -77,8 +77,37 @@ canvas {
     align-items: center;
     text-align: center;
     transition: all .5s ease-in-out;
+    max-width: 96vmin;
 }
 
 .container.active {
     top: 50%;
+}
+
+.container img {
+    width: 12vmin;
+    height: 12vmin;
+}
+
+.container button {
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 1vmin 2vmin;
+    font-size: 2.5vmin;
+    border-radius: 2vmin;
+    margin-top: 3vmin;
+    cursor: pointer;
+}
+
+.container span {
+    font-size: 5vmin;
+}
+
+.container p {
+    font-size: 3vmin;
+}
+
+.container button:hover {
+    background-color: rgba(0, 0, 0, .5);
 }
