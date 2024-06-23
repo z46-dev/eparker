@@ -33,6 +33,12 @@ canvas {
     transform: translate(-50%, -50%);
     width: 12vmin;
     height: 12vmin;
+    transition: transform .2s ease-in-out;
+}
+
+.icon:hover {
+    cursor: pointer;
+    transform: scale(1.1) translate(calc(-50% / 1.1), calc(-50% / 1.1));
 }
 
 .icon img {

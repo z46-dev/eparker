@@ -28,7 +28,7 @@ let icons = [];
 function updateIcons() {
     requestAnimationFrame(updateIcons);
     for (let i = 0; i < icons.length; i++) {
-        const angle = i / icons.length * Math.PI * 2 + performance.now() / 7500;
+        const angle = i / icons.length * Math.PI * 2 + performance.now() / 1E4;
         const icon = icons.item(i);
         icon.style.top = `calc(50% + ${Math.sin(angle) * distance}vmin)`;
         icon.style.left = `calc(50% + ${Math.cos(angle) * distance}vmin)`;
