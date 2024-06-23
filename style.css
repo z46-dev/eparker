@@ -1,3 +1,7 @@
+:root {
+    --blur-amount: 7.5vmin;
+}
+
 * {
     font-family: monospace;
 }
@@ -11,13 +15,15 @@ html, body {
 }
 
 canvas {
-    width: 100%;
-    height: 100%;
+    width: calc(var(--blur-amount) * 2 + 100%);
+    height: calc(var(--blur-amount) * 2 + 100%);
     margin: 0px;
     padding: 0px;
     position: absolute;
+    top: calc(-1 * var(--blur-amount));
+    left: calc(-1 * var(--blur-amount));
     z-index: -1;
-    filter: blur(3vmin);
+    filter: blur(var(--blur-amount));
 }
 
 .icon {
