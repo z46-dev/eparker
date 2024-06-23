@@ -78,5 +78,5 @@ function changeSkill(id) {
     menu.querySelector("span").textContent = icon.dataset.hover;
     menu.querySelector("p").textContent = icon.dataset.skilldescription;
 
-    setTimeout(() => changeMenu("skillsMenu"), 500);
+    changeMenu("skillsMenu");
 }
