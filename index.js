@@ -5,6 +5,9 @@ const tooltip = document.createElement("span");
 tooltip.classList.add("tooltip");
 document.body.appendChild(tooltip);
 
+let spin = true,
+    spinRads = 0;
+
 const allIcons = document.querySelectorAll(".icon");
 for (let i = 0; i < allIcons.length; i++) {
     const icon = allIcons.item(i);
@@ -12,6 +15,7 @@ for (let i = 0; i < allIcons.length; i++) {
     console.log(icon.dataset);
     if (icon.dataset.skilldescription) {
         icon.addEventListener("click", () => changeSkill(icon.id));
+        icon.addEventListener("touchstart", () => changeSkill(icon.id));
     }
 
     const img = new Image();
@@ -21,10 +25,14 @@ for (let i = 0; i < allIcons.length; i++) {
     icon.addEventListener("mouseenter", () => {
         tooltip.textContent = icon.dataset.hover;
         tooltip.classList.add("active");
+
+        spin = false;
     });
 
     icon.addEventListener("mouseleave", () => {
         tooltip.classList.remove("active");
+
+        spin = true;
     });
 
     icon.addEventListener("touchstart", () => {
@@ -47,12 +55,19 @@ const distance = 27;
 let icons = [];
 function updateIcons() {
     requestAnimationFrame(updateIcons);
+
+    if (!spin) {
+        return;
+    }
+
     for (let i = 0; i < icons.length; i++) {
-        const angle = i / icons.length * Math.PI * 2 + performance.now() / 1E4;
+        const angle = i / icons.length * Math.PI * 2 + spinRads;
         const icon = icons.item(i);
         icon.style.top = `calc(50% + ${Math.sin(angle) * distance}vmin)`;
         icon.style.left = `calc(50% + ${Math.cos(angle) * distance}vmin)`;
     }
+
+    spinRads += .001;
 }
 
 updateIcons();
