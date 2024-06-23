@@ -23,7 +23,7 @@ for (let i = 0; i < allIcons.length; i++) {
     });
 }
 
-const distance = 25;
+const distance = 27;
 let icons = [];
 function updateIcons() {
     requestAnimationFrame(updateIcons);
