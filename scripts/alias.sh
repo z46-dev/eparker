@@ -16,4 +16,4 @@ alias echo='ed'
 alias vim='ed'
 alias vi='ed'
 
-echo "RAM Downloaded!! 😉"
+echo "Get aliased!"

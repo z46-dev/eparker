@@ -2,59 +2,203 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal website! Come check it out!">
+    <meta name="author" content="Evan Parker">
+    <meta name="keywords"
+        content="Evan Parker, Evan, Parker, z46, z46-dev, z46dev, z46.dev, z46-dev.github.io, z46-dev.github.io/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5555CA">
+
     <title>Evan Parker</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./index.js" type="module" defer></script>
 </head>
 
 <body>
-    <canvas></canvas>
-    <div class="container" id="mainMenu">
-        <div class="icon" id="contact" data-hover="Contact Me!" onclick="changeMenu('contactMenu');"></div>
-        <div class="icon" id="discord" data-hover="Join my Discord server!" onclick="window.open('//discord.gg/NmzPN9QfA9');"></div>
-        <div class="icon" id="github" data-hover="Check out my GitHub profile!" onclick="window.open('//github.com/z46-dev');"></div>
-        <div class="icon" id="resume" data-hover="Take a look at my interactive résumé!" onclick="changeMenu('resumeMenu');"></div>
-        <div class="icon" id="projects" data-hover="Check out some of my projects!" onclick="changeMenu('projectsMenu');"></div>
-        <div class="icon" id="credits" data-hover="SVG icons from https://svgrepo.com/" onclick="window.open('//svgrepo.com/');"></div>
-        <h1>Evan Parker</h1>
-    </div>
 
-    <div class="container" id="contactMenu">
-        <div class="icon" id="mail" data-hover="Email me!"></div>
-        <div class="icon" id="linkedin" data-hover="Connect with me on LinkedIn!"></div>
-        <div class="icon" id="back" data-hover="Back" onclick="changeMenu('mainMenu');"></div>
-        <h1>Contact Me!</h1>
-    </div>
+    <header>
+        <span>Evan Parker</span>
+        <nav>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <button id="theme-toggle">Theme Toggle</button>
+    </header>
 
-    <div class="container" id="projectsMenu">
-        <div class="icon" id="maze" data-hover="Procedural Maze Generator" onclick="window.open('//gmg.eparker.dev');"></div>
-        <div class="icon" id="raytracing" data-hover="Simple Raytracing Test" onclick="window.open('//ray.eparker.dev');"></div>
-        <div class="icon" id="weather" data-hover="NFA Weather App" onclick="window.open('//wx.nfaschool.org');"></div>
-        <div class="icon" id="flot" data-hover="Flot, a naval game (IN DEVELOPMENT)" onclick="window.open('//flot.eparker.dev');"></div>
-        <div class="icon" id="tabulaRasa" data-hover="Tabula Rasa, a tanks game, my APCSA final project (NOT ACTIVE)" onclick="window.open('//github.com/z46-dev/CSFinal');"></div>
-        <div class="icon" id="back" data-hover="Back" onclick="changeMenu('mainMenu');"></div>
-        <h1>Some of my Projects</h1>
-    </div>
+    <main>
 
-    <div class="container" id="resumeMenu">
-        <div class="icon" id="coding" data-hover="Coding Skills" data-skilldescription="I am proficient in several programming languages, including JavaScript, Go, Java, HTML, CSS, and C++. I am also competent in C, Python, and Rust, and have developed various applications using these languages."></div>
-        <div class="icon" id="git" data-hover="Source Control" data-skilldescription="I have extensive experience with source control tools such as Git, both through VSCode and the command line, and have collaborated on projects using GitHub."></div>
-        <div class="icon" id="protocols" data-hover="Web Protocols" data-skilldescription="Through game development and other programming projects, I have gained knowledge of various web protocols, including TCP, HTTP/S, SSH, SFTP, WebSockets, and UDP."></div>
-        <div class="icon" id="router" data-hover="Networking" data-skilldescription="I have practical experience in networking from managing my own homelab and assisting in network setup. I am skilled in configuring a simple network with a firewall-router, switches, PoE switches, servers, and user workstations and devices."></div>
-        <div class="icon" id="server-cloud" data-hover="Servers and the Cloud" data-skilldescription="I have experience managing my own server and small computers acting as Linux servers, and I am familiar with cloud asset management and cloud hosting platforms."></div>
-        <div class="icon" id="webpage" data-hover="Web Development" data-skilldescription="I have built streamlined websites from scratch without relying on libraries and developed complete multiplayer web games. Additionally, I have used WebAssembly to port Go and C code to the web for enhanced performance."></div>
-        <div class="icon" id="operatingSystem" data-hover="Operating Systems" data-skilldescription="I have extensive experience with Windows and Linux distributions such as Ubuntu, Kali, and Arch as desktop operating systems and have used various Linux distributions such as Debian, Ubuntu, and Raspbian for server environments. I am also familiar with iOS and Android devices."></div>
-        <div class="icon" id="hardware" data-hover="Hardware" data-skilldescription="I have performed hardware upgrades on desktop computers, laptops, and servers, as well as basic repairs on monitors and laptops."></div>
-        <div class="icon" id="back" data-hover="Back" onclick="changeMenu('mainMenu');"></div>
-        <h1>Some of my Skills</h1>
-    </div>
+        <div class="content" id="about">
+            <h1>About Me</h1>
+            <p>
+                I am a computer science <span id="college-status">status</span> at the University of New Hampshire
+                in Durham. I enjoy programming and have been studying software development for <span
+                    id="coding-years">some time</span>. I also enjoy creating and playing music. I play most woodwinds
+                and some percussion. I was a member of the University of Hartford's GHYWE group for three years, where I
+                played Alto Saxophone and Bb Clarinet.
+            </p>
 
-    <div class="container" id="skillsMenu">
-        <img src="./icons/resume.svg" alt="Skill Image"/><br/>
-        <span>SKILL NAME</span>
-        <p>Skill Information</p>
-        <button onclick="changeMenu('resumeMenu');">Back</button>
-    </div>
+            <h2>Software Skills</h2>
+            <p>
+                I have experience with many programming languages, including C, C++, Java, Python, Go, Rust, and
+                JavaScript. I've worked with some frameworks such as React and Django, and can create full-stack web
+                apps from scratch, using only the language-provided libraries for most non-niche tasks. I have
+                experience with SQL and structured databases, including using MySQL, SQLite, PostgreSQL, and MongoDB. I
+                have used tools like Docker, Bamboo, Bitbucket, GitHub, and GitLab for CI/CD and version control. I have
+                a lot of experience with both Linux and Windows as desktop OSes and server OSes.
+            </p>
+
+            <h2>Hardware & Networking Skills</h2>
+            <p>
+                I got into hardware in high school by repairing old laptops and desktop computers. After that, I picked
+                up a Raspberry PI to run linux on and that's how I got into home labbing. More information on what's in
+                my lab, check out the <a href="projects">projects</a> section. I have experience in networking, through
+                my homelab and through my work. I have experience with MikroTik, Cisco, Ubiquiti UniFi, and Mellanox
+                networking equipment. I really enjoy the security aspect of both software and hardware, and I think that
+                running my own lab is a good way of learning practically.
+            </p>
+
+            
+        </div>
+
+        <div class="content" id="projects">
+            <h1>Projects</h1>
+
+            <div class="project">
+                <h2>Homelab</h2>
+                <p>
+                    I am an enthusiast of homelabbing. I have a server rack in my room with a few servers and some
+                    networking equipment.
+                    This lab also provides internet to my desktop and other devices I have via ethernet. Currently, I am
+                    running bare-metal
+                    Ubuntu 24.04 LTS on my servers. I am mainly running a private Minecraft server and working on
+                    training CERSE, a project
+                    listed below. I have plans to start a cluster using Proxmox on my servers, and implement proper
+                    infrastructure soon.
+                </p>
+
+                <p>
+                    I am considering using LDAP and IPA for user management, as well as writing an Ansible playbook to
+                    automate the setup
+                    of new virtual machines and servers. I will also run my own DNS server and a VPN server for remote
+                    access into the lab.
+                    I still plan on running a minecraft server for friends and maybe some other game servers, since it's
+                    a good way to bring
+                    people together for some fun.
+                </p>
+
+                <h3>Hardware</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Device</th>
+                            <th>Processors</th>
+                            <th>Memory</th>
+                            <th>Storage</th>
+                            <th>Networking</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IBM System x3550 M3</td>
+                            <td>2x Intel Xeon X5450 = 8 (12)</td>
+                            <td>32GB DDR2</td>
+                            <td>2x 76GB 10k SAS</td>
+                            <td>8x 1GbE RJ45</td>
+                        </tr>
+                        <tr>
+                            <td>DELL PowerEdge R420</td>
+                            <td>2x Intel Xeon E5-2430 = 12 (24)</td>
+                            <td>192GB DDR3</td>
+                            <td>2x 1TB 7.2k SATA</td>
+                            <td>2x 1GbE RJ45</td>
+                        </tr>
+                        <tr>
+                            <td>DELL PowerEdge R730xd</td>
+                            <td>2x Intel Xeon E5-2680 v3 = 24 (48)</td>
+                            <td>128GB DDR4</td>
+                            <td>5x 1TB SAS SSD</td>
+                            <td>4x 1GbE RJ45, 2x 10Gb SFP+</td>
+                        </tr>
+                        <tr>
+                            <td>DELL PowerEdge R740xd</td>
+                            <td>2x Intel Xeon Gold 6154 = 36 (72)</td>
+                            <td>512GB DDR4</td>
+                            <td>12x 4TB 7.2K SAS</td>
+                            <td>2x 1GbE RJ45, 2x 10Gb SFP+</td>
+                        </tr>
+                        <tr>
+                            <td>Raspberry Pi 4B</td>
+                            <td>1x ARM Cortex-A72 = 4</td>
+                            <td>8GB LPDDR4</td>
+                            <td>64GB microSD</td>
+                            <td>1x 1GbE RJ45</td>
+                        </tr>
+                        <tr>
+                            <td>Raspberry Pi 5</td>
+                            <td>1x ARM Cortex-A76 = 4</td>
+                            <td>8GB LPDDR4</td>
+                            <td>64GB microSD</td>
+                            <td>1x 1GbE RJ45</td>
+                        </tr>
+                        <tr>
+                            <td>MikroTik CRS326</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>24x 10Gb SFP+, 2x 40Gb QSFP+</td>
+                        </tr>
+                        <tr>
+                            <td>MikroTik CRS354</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>48x 1GbE RJ45, 4x 10Gb SFP+, 2x 40Gb QSFP+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="project">
+                <h1>CERSE</h1>
+                <p>
+                    CERSE, Central Engine for Resource and System Efficiency, is a modern datacenter management
+                    tool. It is designed to
+                    manage anything from a simple homelab to a large scale cluster of datacenters. Built in Go,
+                    CERSE is lightweight and
+                    efficient. The core of CERSE is a simple app that collects information from systems via IPMI,
+                    SSH, and BMC tools and
+                    stores it in a compressed format in a database. This data is then interpreted both by algorithms
+                    and a custom written
+                    machine learning model to provide insights into the efficiency of the datacenter, and to catch
+                    potential issues before
+                    they become problems. Results can be accessed via a CLI interface and a web panel which is
+                    neately designed to fit on
+                    all types of devices. The web panel also comes with a fancy panel slideshow design for
+                    quick-glance metrics to put on
+                    a large screen. Additionaly CERSE can be accessed through voice control, and can interpret basic
+                    sentences into questions
+                    and in some cases, instructions. CERSE can also perform basic tasks on machines in your lab
+                    through its connected tools.
+                    You can organize your resources into groups, which can have recursive subgroups. CERSE is the
+                    perfect tool to connect your
+                    infrastructure.
+                </p>
+            </div>
+
+            <div class="project">
+                <h2>Graphical/Demo Projects</h2>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <span>Evan Parker</span>
+    </footer>
+
 </body>
 
 </html>
