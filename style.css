@@ -108,7 +108,7 @@ table th, table td {
 
 footer {
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: var(--accent-color);
     font-size: 2vmin;
     display: flex;
     justify-content: center;
