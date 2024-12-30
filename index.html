@@ -23,7 +23,6 @@
         <nav>
             <a href="#about" class="nav-link">About</a>
             <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
         </nav>
         <button id="theme-toggle">Theme Toggle</button>
     </header>
@@ -59,8 +58,6 @@
                 networking equipment. I really enjoy the security aspect of both software and hardware, and I think that
                 running my own lab is a good way of learning practically.
             </p>
-
-
         </div>
 
         <div class="content" id="projects">
@@ -70,23 +67,17 @@
                 <h2>Homelab</h2>
                 <p>
                     I am an enthusiast of homelabbing. I have a server rack in my room with a few servers and some
-                    networking equipment.
-                    This lab also provides internet to my desktop and other devices I have via ethernet. Currently, I am
-                    running bare-metal
-                    Ubuntu 24.04 LTS on my servers. I am mainly running a private Minecraft server and working on
-                    training CERSE, a project
-                    listed below. I have plans to start a cluster using Proxmox on my servers, and implement proper
-                    infrastructure soon.
+                    networking equipment. This lab also provides internet to my desktop and other devices I have via
+                    ethernet. Currently, I am running bare-metal Ubuntu 24.04 LTS on my servers. I am mainly running a
+                    private Minecraft server and working on training CERSE, a project listed below. I have plans to
+                    start a cluster using Proxmox on my servers, and implement proper infrastructure soon.
                 </p>
 
                 <p>
                     I am considering using LDAP and IPA for user management, as well as writing an Ansible playbook to
-                    automate the setup
-                    of new virtual machines and servers. I will also run my own DNS server and a VPN server for remote
-                    access into the lab.
-                    I still plan on running a minecraft server for friends and maybe some other game servers, since it's
-                    a good way to bring
-                    people together for some fun.
+                    automate the setup of new virtual machines and servers. I will also run my own DNS server and a VPN
+                    server for remote access into the lab. I still plan on running a minecraft server for friends and
+                    maybe some other game servers, since it's a good way to bring people together for some fun.
                 </p>
 
                 <h3>Hardware</h3>
@@ -164,35 +155,77 @@
             <div class="project">
                 <h1>CERSE</h1>
                 <p>
-                    CERSE, Central Engine for Resource and System Efficiency, is a modern datacenter management
-                    tool. It is designed to
-                    manage anything from a simple homelab to a large scale cluster of datacenters. Built in Go,
-                    CERSE is lightweight and
-                    efficient. The core of CERSE is a simple app that collects information from systems via IPMI,
-                    SSH, and BMC tools and
-                    stores it in a compressed format in a database. This data is then interpreted both by algorithms
-                    and a custom written
-                    machine learning model to provide insights into the efficiency of the datacenter, and to catch
-                    potential issues before
-                    they become problems. Results can be accessed via a CLI interface and a web panel which is
-                    neately designed to fit on
-                    all types of devices. The web panel also comes with a fancy panel slideshow design for
-                    quick-glance metrics to put on
-                    a large screen. Additionaly CERSE can be accessed through voice control, and can interpret basic
-                    sentences into questions
-                    and in some cases, instructions. CERSE can also perform basic tasks on machines in your lab
-                    through its connected tools.
-                    You can organize your resources into groups, which can have recursive subgroups. CERSE is the
-                    perfect tool to connect your
-                    infrastructure.
+                    CERSE, Central Engine for Resource and System Efficiency, is a modern datacenter management tool. It
+                    is designed to manage anything from a simple homelab to a large scale cluster of datacenters. Built
+                    in Go, CERSE is lightweight and efficient. The core of CERSE is a simple app that collects
+                    information from systems via IPMI, SSH, and BMC tools and stores it in a compressed format in a
+                    database. This data is then interpreted both by algorithms and a custom written machine learning
+                    model to provide insights into the efficiency of the datacenter, and to catch potential issues
+                    before they become problems. Results can be accessed via a CLI interface and a web panel which is
+                    neately designed to fit on all types of devices. The web panel also comes with a fancy panel
+                    slideshow design for quick-glance metrics to put on a large screen. Additionaly CERSE can be
+                    accessed through voice control, and can interpret basic sentences into questions and in some cases,
+                    instructions. CERSE can also perform basic tasks on machines in your lab through its connected
+                    tools. You can organize your resources into groups, which can have recursive subgroups. CERSE is the
+                    perfect tool to connect your infrastructure.
+                </p>
+            </div>
+
+            <div class="project">
+                <h2>Velox</h2>
+
+                <p>
+                    I've always been interested in how compilers work, so I decided to create my own programming
+                    language. Velox is a C-like programming language in its early stages of development. It's designed
+                    to be a low-level language that can run in embedded systems, and be used for HPC. Velox will have
+                    the capability to run programs on an Intel Xeon Phi Coprocessor, and on a simple microcontroller.
+                    It will also have fun features that may seem out of place in a low-level language, such as pre-built
+                    functions for matrix math and other scientific computing tasks, which will be optimized for both
+                    running on CPU, GPU, and other accelerators. Velox will have a synchronous networking library, and
+                    will be able to communicate with multiple instances of a program running on different machines. I
+                    think that Velox will be a great language for scientific computing, and for general low-level
+                    programming.
+                </p>
+
+                <p>
+                    This project is less high priority, and will continue to take shape as I go through college.
+                </p>
+            </div>
+
+            <div class="project">
+                <h2>Cog</h2>
+
+                <p>
+                    Performance is a big deal in software development. Cog is a virtual environment built in Go that
+                    simulates a basic 32-bit machine, including the CPU, RAM, storage, and networking (between other
+                    machines only). Programs can be written in a custom assembly language as well as a subset of C which
+                    gets compiled to this custom assembly language. There will be many ways to optimize code you write,
+                    and you can see the effects of your optimizations in real time. Cog will also have a built-in
+                    performance metrics, and you can measure your performance down to the clock-cycles. There will be
+                    many "problems" which have a set solution that you can try your hand in to make the fastest solution.
+                    There will also be accounts and leaderboards for these problems. Cog will also simulate basic threads
+                    and processes, which allows for benchmarking in different contexts.
+                </p>
+
+                <p>
+                    This project is less high priority, and will continue to take shape as I go through college.
                 </p>
             </div>
 
             <div class="project">
                 <h2>Graphical/Demo Projects</h2>
+
+                <h3>Physics Simulation</h3>
+                <p>
+                    Demo coming soon.
+                </p>
+
+                <h3>WebGL Water Simulation</h3>
+                <p>
+                    Demo coming soon.
+                </p>
             </div>
         </div>
-
     </main>
 
     <footer>
