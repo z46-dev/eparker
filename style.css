@@ -20,7 +20,7 @@ html, body {
 
 header {
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: var(--accent-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +41,7 @@ header nav {
 }
 
 header nav a {
-    color: var(--light-color);
+    color: var(--accent-color);
     text-decoration: none;
     padding: 1vmin;
 }
@@ -136,4 +136,9 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-color);
+}
+
+p a {
+    color: var(--accent-color);
+    text-decoration: none;
 }
