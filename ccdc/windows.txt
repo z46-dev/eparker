@@ -1,0 +1,13 @@
+Learn about AdminSDHolder and how it works. 
+Get familiar with AD structure and what exists by default in a new domain.
+Learn about Kerberos vs NTLM
+Learn about group policy
+Read posts on https://adsecurity.org/
+Learn about bloodhound community edition.
+Https://github.com/infosecn1nja/AD-Attack-Defense
+https://learn.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview
+
+They will always go for tier 0.  So Domain Admins, Administrators and Enterprise Administrator to get persistent access.
+
+Also make sure you understand SIDs and how they are used in AD.  Two accounts can have the same name (not at the same time) but still be different accounts due to the SID being the actual anchor attribute of identity in AD.
+There are certain objects that have pre-defined SIDs like the Administrator account always ends in -500

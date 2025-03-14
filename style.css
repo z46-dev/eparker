@@ -1,9 +1,9 @@
 /* Theme Colors, controlled by JS */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --accent-color: #28a745;
-    --light-color: #ffffff;
+    --primary-color: #000000;
+    --secondary-color: #000000;
+    --accent-color: #000000;
+    --light-color: #000000;
     --black-color: #000000;
 }
 
