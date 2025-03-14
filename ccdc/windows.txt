@@ -11,3 +11,28 @@ They will always go for tier 0.  So Domain Admins, Administrators and Enterprise
 
 Also make sure you understand SIDs and how they are used in AD.  Two accounts can have the same name (not at the same time) but still be different accounts due to the SID being the actual anchor attribute of identity in AD.
 There are certain objects that have pre-defined SIDs like the Administrator account always ends in -500
+
+
+Default Users & SGs:
+- Administrator User (SID-500) - Built-in account for administering the computer/domain
+- Allowed RODC Password Replication Group - Members of this group can have their passwords replicated to read-only domain controllers
+- Cert Publishers - Members of this group are permitted to publish certificates for User objects in Active Directory
+- Cloneable Domain Controllers - Members of this group are allowed to clone domain controllers
+- Denied RODC Password Replication Group - Members of this group cannot have their passwords replicated to read-only domain controllers
+- DnsAdmins - Members of this group have administrative access to the DNS Server service
+- DnsUpdateProxy - Members of this group can perform dynamic updates on behalf of other clients
+- Domain Admins - Members of this group have full control of the domain
+- Domain Computers - Members of this group have read access in the domain
+- Domain Controllers - Members of this group have administrative access to domain controllers
+- Domain Guests - Members of this group have the same access as the Guests group by default
+- Domain Users - Members of this group have read access in the domain
+- Enterprise Admins - Members of this group have full control of the forest
+- Enterprise Key Admins - Members of this group can perform administrative actions related to the key distribution service
+- Enterprise Read-only Domain Controllers - Members of this group have read-only access to the forest
+- Group Policy Creator Owners - Members of this group can modify group policy objects in Active Directory
+- Guest User (SID-501) - Built-in account for guest access to the computer/domain
+- Key Admins - Members of this group can perform administrative actions related to the key distribution service
+- Protected Users - Members of this group have additional protections applied to their accounts and can only authenticate using accounts that are protected users
+- RAS and IAS Servers - Servers in this group can access remote access properties of users
+- Read-only Domain Controllers - Members of this group have read-only access to the domain
+- Schema Admins - Members of this group can modify the Active Directory schema
